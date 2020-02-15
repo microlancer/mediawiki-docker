@@ -1,0 +1,6 @@
+FROM mediawiki:1.34
+
+RUN apt-get update && apt-get install -y vim ssh stunnel4 exim4
+
+COPY etc/stunnel/ln-gateway-client.conf /etc/stunnel/ln-gateway-client.conf
+COPY etc/hosts /etc/hosts

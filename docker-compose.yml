@@ -13,6 +13,8 @@ services:
       - database
     volumes:
       - ./html:/var/www/html
+      - ./etc:/etc
+      - ./log:/var/log
   database:
     image: mariadb
     restart: always
