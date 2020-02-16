@@ -36,8 +36,7 @@ $wgGroupPermissions['*']['createpage'] = false;
 $wgGroupPermissions['user']['createpage'] = false;
 $wgGroupPermissions['trusted']['createpage'] = true;
 
-$wgBitcoinPaymentApiKey = 'aaaaaabbbbbbbccccccc111';
-$wgBitcoinPaymentNodeUrl = 'http://ln-gateway:3000';
+$wgLightningPaymentNodeUrl = 'http://ln-gateway:3000';
 #$wgMainCacheType = CACHE_NONE;
 #$wgCacheDirectory = false;
 #$wgShowExceptionDetails = true;
