@@ -1,6 +1,10 @@
 FROM mediawiki:1.34
 
 RUN apt-get update && apt-get install -y vim ssh stunnel4 exim4
+RUN apt-get install -y iputils-ping mariadb-client
 
 COPY etc/stunnel/ln-gateway-client.conf /etc/stunnel/ln-gateway-client.conf
-COPY etc/hosts /etc/hosts
+
+# Copy these folders so we can volume mount, and copy them back
+RUN cp -a /var/www/html /var/www/html2
+RUN cp -a /etc/stunnel /etc/stunnel2
